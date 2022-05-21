@@ -32,7 +32,7 @@
  * The amount of minutes it takes to prepare a single layer.
  */
 const PREPARATION_MINUTES_PER_LAYER = 2
-export const EXPECTED_MINUTES_IN_OVEN = 40
+const EXPECTED_MINUTES_IN_OVEN = 40
 /**
  * Determine the amount of minutes the lasagna still needs to remain in the
  * oven to be properly prepared.
@@ -40,7 +40,7 @@ export const EXPECTED_MINUTES_IN_OVEN = 40
  * @param {number} actualMinutesInOven
  * @returns {number} the number of minutes remaining
  */
-export function remainingMinutesInOven(actualMinutesInOven) {
+function remainingMinutesInOven(actualMinutesInOven) {
   return EXPECTED_MINUTES_IN_OVEN - actualMinutesInOven
 }
 /**
@@ -49,7 +49,7 @@ export function remainingMinutesInOven(actualMinutesInOven) {
  * @param {number} numberOfLayers
  * @returns {number} the total preparation time
  */
-export function preparationTimeInMinutes(numberOfLayers) {
+function preparationTimeInMinutes(numberOfLayers) {
   return numberOfLayers * PREPARATION_MINUTES_PER_LAYER
 }
 /**
@@ -60,8 +60,10 @@ export function preparationTimeInMinutes(numberOfLayers) {
  * @param {number} actualMinutesInOven
  * @returns {number} the total working time
  */
-export function totalTimeInMinutes(numberOfLayers, actualMinutesInOven) {
+function totalTimeInMinutes(numberOfLayers, actualMinutesInOven) {
   return preparationTimeInMinutes(numberOfLayers) + actualMinutesInOven
-
-  throw new Error('Please implement the totalTimeInMinutes function')
 }
+
+console.log(remainingMinutesInOven(30))
+console.log(preparationTimeInMinutes(2))
+console.log(totalTimeInMinutes(3, 20))
