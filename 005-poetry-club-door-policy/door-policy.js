@@ -27,7 +27,7 @@
  * @returns {string}
  */
 function frontDoorResponse(line) {
-  throw new Error('Remove this line and implement the function')
+  return line[0]
 }
 
 /**
@@ -38,7 +38,7 @@ function frontDoorResponse(line) {
  * @returns {string} the front door password
  */
 function frontDoorPassword(word) {
-  throw new Error('Remove this line and implement the function')
+  return word[0].toUpperCase() + word.slice(1).toLowerCase()
 }
 
 /**
@@ -62,3 +62,10 @@ function backDoorResponse(line) {
 function backDoorPassword(word) {
   throw new Error('Remove this line and implement the function')
 }
+
+// ==================
+// console.log(frontDoorResponse('Stands so high'))
+// ==================
+// console.log(frontDoorPassword('SHIRE'))
+// console.log(frontDoorPassword('shire'))
+// ==================
