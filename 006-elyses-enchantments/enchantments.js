@@ -1,3 +1,17 @@
+// @ts-check
+
+/**
+ * Retrieve card from cards array at the 0-based position
+ *
+ * @param {number[]} cards
+ * @param {number} position
+ *
+ * @returns {number} the card
+ */
+function getItem(cards, position) {
+  throw new Error('Implement the getItem function')
+}
+
 /**
  * Exchange card with replacementCard at the 0-based position
  *
@@ -65,7 +79,7 @@ function insertItemAtBottom(cards, newCard) {
  *
  * @returns {number[]} the cards without the removed card
  */
-export function removeItemAtBottom(cards) {
+function removeItemAtBottom(cards) {
   throw new Error('Implement the removeItemAtBottom function')
 }
 
@@ -77,6 +91,10 @@ export function removeItemAtBottom(cards) {
  *
  * @returns {boolean} true if there are exactly stackSize number of cards, false otherwise
  */
-export function checkSizeOfStack(cards, stackSize) {
+function checkSizeOfStack(cards, stackSize) {
   throw new Error('Implement the checkSizeOfStack function')
 }
+
+// ==================
+
+// ==================
