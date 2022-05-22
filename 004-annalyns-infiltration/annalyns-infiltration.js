@@ -111,11 +111,11 @@ function canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIs
 // const prisonerIsAwake = true
 // console.log(canSignalPrisoner(archerIsAwake, prisonerIsAwake))
 // ==================
-const knightIsAwake = false
-const archerIsAwake = true
-const prisonerIsAwake = false
-const petDogIsPresent = false
-console.log(
-  canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent)
-)
+// const knightIsAwake = false
+// const archerIsAwake = true
+// const prisonerIsAwake = false
+// const petDogIsPresent = false
+// console.log(
+//   canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent)
+// )
 // ==================
