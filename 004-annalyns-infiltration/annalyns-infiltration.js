@@ -59,7 +59,13 @@ function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
  *
  * @returns {boolean} Whether or not you can send a signal to the prisoner.
  */
-function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {}
+function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {
+  if (prisonerIsAwake && !archerIsAwake) {
+    return true
+  } else {
+    return false
+  }
+}
 
 /**
  * The final stage in the plan: freeing Annalyn's best friend.
@@ -81,6 +87,11 @@ function canFreePrisoner(
 // ==================
 // const knightIsAwake = true
 // console.log(canExecuteFastAttack(knightIsAwake))
+// ==================
+// const knightIsAwake = false
+// const archerIsAwake = true
+// const prisonerIsAwake = false
+// console.log(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake))
 // ==================
 // const knightIsAwake = false
 // const archerIsAwake = true
