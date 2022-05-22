@@ -85,7 +85,8 @@ function insertItemAtBottom(cards, newCard) {
  * @returns {number[]} the cards without the removed card
  */
 function removeItemAtBottom(cards) {
-  throw new Error('Implement the removeItemAtBottom function')
+  cards.shift()
+  return cards
 }
 
 /**
@@ -97,7 +98,7 @@ function removeItemAtBottom(cards) {
  * @returns {boolean} true if there are exactly stackSize number of cards, false otherwise
  */
 function checkSizeOfStack(cards, stackSize) {
-  throw new Error('Implement the checkSizeOfStack function')
+  return cards.length === stackSize
 }
 
 // ==================
@@ -118,4 +119,9 @@ function checkSizeOfStack(cards, stackSize) {
 // ==================
 // const newCard = 8
 // console.log(insertItemAtBottom([5, 9, 7, 1], newCard))
+// ==================
+// console.log(removeItemAtBottom([8, 5, 9, 7, 1]))
+// ==================
+// const stackSize = 4
+// console.log(checkSizeOfStack([3, 2, 6, 4, 8], stackSize))
 // ==================
