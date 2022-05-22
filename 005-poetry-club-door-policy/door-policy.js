@@ -49,7 +49,8 @@ function frontDoorPassword(word) {
  * @returns {string}
  */
 function backDoorResponse(line) {
-  throw new Error('Remove this line and implement the function')
+  const trimmedLine = line.trim()
+  return trimmedLine[trimmedLine.length - 1]
 }
 
 /**
@@ -60,7 +61,7 @@ function backDoorResponse(line) {
  * @returns {string} the back door password
  */
 function backDoorPassword(word) {
-  throw new Error('Remove this line and implement the function')
+  return `${frontDoorPassword(word)}, please`
 }
 
 // ==================
@@ -69,3 +70,7 @@ function backDoorPassword(word) {
 // console.log(frontDoorPassword('SHIRE'))
 // console.log(frontDoorPassword('shire'))
 // ==================
+// console.log(backDoorResponse('Stands so high'))
+// console.log(backDoorResponse('Stands so high   '))
+// ==================
+console.log(backDoorPassword('horse'))
