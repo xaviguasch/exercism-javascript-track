@@ -60,7 +60,8 @@ function removeItem(cards, position) {
  * @returns {number[]} the cards without the removed card
  */
 function removeItemFromTop(cards) {
-  throw new Error('Implement the removeItemFromTop function')
+  cards.pop()
+  return cards
 }
 
 /**
@@ -72,7 +73,8 @@ function removeItemFromTop(cards) {
  * @returns {number[]} the cards including the new card
  */
 function insertItemAtBottom(cards, newCard) {
-  throw new Error('Implement the insertItemAtBottom function')
+  cards.unshift(newCard)
+  return cards
 }
 
 /**
@@ -109,6 +111,11 @@ function checkSizeOfStack(cards, stackSize) {
 // const newCard = 8
 // console.log(insertItemAtTop([5, 9, 7, 1], newCard))
 // ==================
-const position = 2
-console.log(removeItem([3, 2, 6, 4, 8], position))
+// const position = 2
+// console.log(removeItem([3, 2, 6, 4, 8], position))
+// ==================
+// console.log(removeItemFromTop([3, 2, 6, 4, 8]))
+// ==================
+// const newCard = 8
+// console.log(insertItemAtBottom([5, 9, 7, 1], newCard))
 // ==================
