@@ -26,7 +26,13 @@
  *
  * @return {boolean} Whether or not you can execute a fast attack.
  */
-function canExecuteFastAttack(knightIsAwake) {}
+function canExecuteFastAttack(knightIsAwake) {
+  if (knightIsAwake) {
+    return false
+  } else {
+    return true
+  }
+}
 
 /**
  * A useful spy captures information, which they can't do if everyone's asleep.
@@ -37,7 +43,13 @@ function canExecuteFastAttack(knightIsAwake) {}
  *
  * @returns {boolean} Whether or not you can spy on someone.
  */
-function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {}
+function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
+  if (knightIsAwake || archerIsAwake || prisonerIsAwake) {
+    return true
+  } else {
+    return false
+  }
+}
 
 /**
  * You'll get caught by the archer if you signal while they're awake.
@@ -65,3 +77,13 @@ function canFreePrisoner(
   prisonerIsAwake,
   petDogIsPresent
 ) {}
+
+// ==================
+// const knightIsAwake = true
+// console.log(canExecuteFastAttack(knightIsAwake))
+// ==================
+// const knightIsAwake = false
+// const archerIsAwake = true
+// const prisonerIsAwake = false
+// console.log(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake))
+// ==================
