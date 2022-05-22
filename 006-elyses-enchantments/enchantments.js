@@ -35,7 +35,8 @@ function setItem(cards, position, replacementCard) {
  * @returns {number[]} the cards with the newCard applied
  */
 function insertItemAtTop(cards, newCard) {
-  throw new Error('Implement the insertItemAtTop function')
+  cards.push(newCard)
+  return cards
 }
 
 /**
@@ -47,7 +48,8 @@ function insertItemAtTop(cards, newCard) {
  * @returns {number[]} the cards without the removed card
  */
 function removeItem(cards, position) {
-  throw new Error('Implement the removeItem function')
+  cards.splice(position, 1)
+  return cards
 }
 
 /**
@@ -100,7 +102,13 @@ function checkSizeOfStack(cards, stackSize) {
 // const position = 2
 // console.log(getItem([1, 2, 4, 1], position))
 // ==================
+// const position = 2
+// const replacementCard = 6
+// console.log(setItem([1, 2, 4, 1], position, replacementCard))
+// ==================
+// const newCard = 8
+// console.log(insertItemAtTop([5, 9, 7, 1], newCard))
+// ==================
 const position = 2
-const replacementCard = 6
-console.log(setItem([1, 2, 4, 1], position, replacementCard))
+console.log(removeItem([3, 2, 6, 4, 8], position))
 // ==================
