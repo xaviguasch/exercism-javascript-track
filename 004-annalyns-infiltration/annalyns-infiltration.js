@@ -77,12 +77,15 @@ function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {
  *
  * @returns {boolean} Whether or not you can free Annalyn's friend.
  */
-function canFreePrisoner(
-  knightIsAwake,
-  archerIsAwake,
-  prisonerIsAwake,
-  petDogIsPresent
-) {}
+function canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent) {
+  if (petDogIsPresent && !archerIsAwake) {
+    return true
+  } else if (!petDogIsPresent && prisonerIsAwake && !knightIsAwake && !archerIsAwake) {
+    return true
+  } else {
+    return false
+  }
+}
 
 // ==================
 // const knightIsAwake = true
@@ -97,4 +100,12 @@ function canFreePrisoner(
 // const archerIsAwake = true
 // const prisonerIsAwake = false
 // console.log(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake))
+// ==================
+// const knightIsAwake = false
+// const archerIsAwake = true
+// const prisonerIsAwake = false
+// const petDogIsPresent = false
+// console.log(
+//   canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent)
+// )
 // ==================
