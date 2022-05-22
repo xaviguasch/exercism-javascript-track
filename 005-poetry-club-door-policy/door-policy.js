@@ -73,4 +73,4 @@ function backDoorPassword(word) {
 // console.log(backDoorResponse('Stands so high'))
 // console.log(backDoorResponse('Stands so high   '))
 // ==================
-console.log(backDoorPassword('horse'))
+// console.log(backDoorPassword('horse'))
