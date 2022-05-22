@@ -9,7 +9,7 @@
  * @returns {number} the card
  */
 function getItem(cards, position) {
-  throw new Error('Implement the getItem function')
+  return cards[position]
 }
 
 /**
@@ -22,7 +22,8 @@ function getItem(cards, position) {
  * @returns {number[]} the cards with the change applied
  */
 function setItem(cards, position, replacementCard) {
-  throw new Error('Implement the setItem function')
+  cards.splice(position, 1, replacementCard)
+  return cards
 }
 
 /**
@@ -96,5 +97,10 @@ function checkSizeOfStack(cards, stackSize) {
 }
 
 // ==================
-
+// const position = 2
+// console.log(getItem([1, 2, 4, 1], position))
+// ==================
+const position = 2
+const replacementCard = 6
+console.log(setItem([1, 2, 4, 1], position, replacementCard))
 // ==================
