@@ -39,7 +39,26 @@ function timeToMixJuice(name) {
  * @returns {number} number of limes cut
  */
 function limesToCut(wedgesNeeded, limes) {
-  throw new Error('Please implement the limesToCut function')
+  const wedges = {
+    small: 6,
+    medium: 8,
+    large: 10,
+  }
+
+  let wedgesCut = 0
+  let i = 0
+
+  while (wedgesCut < wedgesNeeded) {
+    if (limes[i]) {
+      wedgesCut += wedges[limes[i]]
+    } else {
+      return i
+    }
+
+    i++
+  }
+
+  return i
 }
 
 /**
@@ -54,6 +73,9 @@ function remainingOrders(timeLeft, orders) {
 }
 
 // ==================
-console.log(timeToMixJuice('Tropical Island'))
-console.log(timeToMixJuice('Berries & Lime'))
+// console.log(timeToMixJuice('Tropical Island'))
+// console.log(timeToMixJuice('Berries & Lime'))
+// ==================
+console.log(limesToCut(25, ['small', 'small', 'large', 'medium', 'small']))
+console.log(limesToCut(10, []))
 // ==================
