@@ -72,6 +72,6 @@ function fixBirdCountLog(birdsPerDay) {
 // const birdsPerDay = [2, 5, 0, 7, 4, 1, 3, 0, 2, 5, 0, 1, 3, 1]
 // console.log(birdsInWeek(birdsPerDay, 2))
 // ==================
-const birdsPerDay = [2, 0, 1, 4, 1, 3, 0]
-console.log(fixBirdCountLog(birdsPerDay))
+// const birdsPerDay = [2, 0, 1, 4, 1, 3, 0]
+// console.log(fixBirdCountLog(birdsPerDay))
 // ==================
