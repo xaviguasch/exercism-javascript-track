@@ -11,7 +11,7 @@
  * @returns {boolean} whether a license is required
  */
 function needsLicense(kind) {
-  throw new Error('Please implement the needsLicense function')
+  return kind === 'car' || kind === 'truck'
 }
 
 /**
@@ -37,3 +37,8 @@ function chooseVehicle(option1, option2) {
 function calculateResellPrice(originalPrice, age) {
   throw new Error('Please implement the calculateResellPrice function')
 }
+
+// ==================
+console.log(needsLicense('car'))
+console.log(needsLicense('bike'))
+// ==================
