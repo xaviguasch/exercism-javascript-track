@@ -23,7 +23,9 @@ function createScoreBoard(key, value) {
  * @returns {Record<string, number>} updated score board
  */
 function addPlayer(scoreBoard, player, score) {
-  throw new Error('Please implement the addPlayer function')
+  scoreBoard[player] = score
+
+  return scoreBoard
 }
 
 /**
@@ -70,5 +72,6 @@ function normalizeScore(params) {
 }
 
 // ==================
-console.log(createScoreBoard())
+// console.log(createScoreBoard())
 // ==================
+console.log(addPlayer({ 'Dave Thomas': 0 }, 'José Valim', 486373))
