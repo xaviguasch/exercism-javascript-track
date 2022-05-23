@@ -62,6 +62,9 @@ function simpleTicketStatus(tickets, ticketId) {
   } else {
     return `${tickets[ticketId]}`
   }
+
+  // Alternative more optimal solution
+  // return tickets[ticketId] ?? "invalid ticket !!!"
 }
 
 /**
