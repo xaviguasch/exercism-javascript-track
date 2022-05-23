@@ -27,7 +27,16 @@ function totalBirdCount(birdsPerDay) {
  * @returns {number} birds counted in the given week
  */
 function birdsInWeek(birdsPerDay, week) {
-  throw new Error('Please implement the birdsInWeek function')
+  const arrStart = week * 7 - 7
+  const arrEnding = arrStart + 6
+
+  let count = 0
+
+  for (let i = arrStart; i <= arrEnding; i++) {
+    count += birdsPerDay[i]
+  }
+
+  return count
 }
 
 /**
@@ -42,8 +51,9 @@ function fixBirdCountLog(birdsPerDay) {
 }
 
 // ==================
-const birdsPerDay = [2, 5, 0, 7, 4, 1, 3, 0, 2, 5, 0, 1, 3, 1]
-console.log(totalBirdCount(birdsPerDay))
+// const birdsPerDay = [2, 5, 0, 7, 4, 1, 3, 0, 2, 5, 0, 1, 3, 1]
+// console.log(totalBirdCount(birdsPerDay))
 // ==================
-
+const birdsPerDay = [2, 5, 0, 7, 4, 1, 3, 0, 2, 5, 0, 1, 3, 1]
+console.log(birdsInWeek(birdsPerDay, 2))
 // ==================
