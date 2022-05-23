@@ -57,7 +57,11 @@ function ticketStatus(tickets, ticketId) {
  * @returns {string} ticket status
  */
 function simpleTicketStatus(tickets, ticketId) {
-  throw new Error('Please implement the simpleTicketStatus function.')
+  if (tickets[ticketId] === null || tickets[ticketId] === undefined) {
+    return 'invalid ticket !!!'
+  } else {
+    return `${tickets[ticketId]}`
+  }
 }
 
 /**
@@ -80,12 +84,21 @@ function gtcVersion(visitor) {
 // }
 // console.log(revokeTicket(visitor))
 // ==================
+// const tickets = {
+//   '0H2AZ123': null,
+//   '23LA9T41': 'Verena Nardi',
+// }
+
+// console.log(ticketStatus(tickets, 'RE90VAW7'))
+// console.log(ticketStatus(tickets, '0H2AZ123'))
+// console.log(ticketStatus(tickets, '23LA9T41'))
+// ==================
 const tickets = {
   '0H2AZ123': null,
   '23LA9T41': 'Verena Nardi',
 }
 
-console.log(ticketStatus(tickets, 'RE90VAW7'))
-console.log(ticketStatus(tickets, '0H2AZ123'))
-console.log(ticketStatus(tickets, '23LA9T41'))
+console.log(simpleTicketStatus(tickets, '23LA9T41'))
+console.log(simpleTicketStatus(tickets, '0H2AZ123'))
+console.log(simpleTicketStatus(tickets, 'RE90VAW7'))
 // ==================
