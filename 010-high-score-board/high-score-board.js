@@ -62,7 +62,11 @@ function updateScore(scoreBoard, player, points) {
  * @returns {Record<string, number>} updated score board
  */
 function applyMondayBonus(scoreBoard) {
-  throw new Error('Please implement the applyMondayBonus function')
+  for (const name in scoreBoard) {
+    scoreBoard[name] += 100
+  }
+
+  return scoreBoard
 }
 
 /**
@@ -83,6 +87,15 @@ function normalizeScore(params) {
 // console.log(removePlayer({ 'Dave Thomas': 0 }, 'Dave Thomas'))
 // console.log(removePlayer({ 'Dave Thomas': 0 }, 'Rose Fanaras'))
 // ==================
+// console.log(updateScore({ 'Freyja Ćirić': 12771008 }, 'Freyja Ćirić', 73))
+// ==================
+const scoreBoard = {
+  'Dave Thomas': 44,
+  'Freyja Ćirić': 539,
+  'José Valim': 265,
+}
+console.log(applyMondayBonus(scoreBoard))
 
-console.log(updateScore({ 'Freyja Ćirić': 12771008 }, 'Freyja Ćirić', 73))
+// ==================
+
 // ==================
