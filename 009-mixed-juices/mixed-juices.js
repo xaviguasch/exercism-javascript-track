@@ -82,6 +82,12 @@ function remainingOrders(timeLeft, orders) {
   }
 
   return ordersLeft.slice(i)
+
+  // Very clever alternative solution
+  // while (timeLeft > 0) {
+  //   timeLeft -= timeToMixJuice(orders.shift());
+  // }
+  // return orders;
 }
 
 // ==================
