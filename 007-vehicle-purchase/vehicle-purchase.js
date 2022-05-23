@@ -39,12 +39,22 @@ function chooseVehicle(option1, option2) {
  * @returns expected resell price in the dealership
  */
 function calculateResellPrice(originalPrice, age) {
-  throw new Error('Please implement the calculateResellPrice function')
+  if (age < 3) {
+    return originalPrice * 0.8
+  } else if (age <= 10) {
+    return originalPrice * 0.7
+  } else {
+    return originalPrice * 0.5
+  }
 }
 
 // ==================
 // console.log(needsLicense('car'))
 // console.log(needsLicense('bike'))
 // ==================
-console.log(chooseVehicle('Wuling Hongguang', 'Toyota Corolla'))
-console.log(chooseVehicle('Volkswagen Beetle', 'Volkswagen Golf'))
+// console.log(chooseVehicle('Wuling Hongguang', 'Toyota Corolla'))
+// console.log(chooseVehicle('Volkswagen Beetle', 'Volkswagen Golf'))
+// ==================
+console.log(calculateResellPrice(1000, 1))
+console.log(calculateResellPrice(1000, 5))
+console.log(calculateResellPrice(1000, 15))
