@@ -39,7 +39,13 @@ function revokeTicket(visitor) {
  * @returns {string} ticket status
  */
 function ticketStatus(tickets, ticketId) {
-  throw new Error('Please implement the ticketStatus function.')
+  if (tickets[ticketId] === null) {
+    return 'not sold'
+  } else if (tickets[ticketId] === undefined) {
+    return 'unknown ticket id'
+  } else {
+    return `sold to ${tickets[ticketId]}`
+  }
 }
 
 /**
@@ -67,10 +73,19 @@ function gtcVersion(visitor) {
 // ==================
 // console.log(createVisitor('Verena Nardi', 45, 'H32AZ123'))
 // ==================
-const visitor = {
-  name: 'Verena Nardi',
-  age: 45,
-  ticketId: 'H32AZ123',
+// const visitor = {
+//   name: 'Verena Nardi',
+//   age: 45,
+//   ticketId: 'H32AZ123',
+// }
+// console.log(revokeTicket(visitor))
+// ==================
+const tickets = {
+  '0H2AZ123': null,
+  '23LA9T41': 'Verena Nardi',
 }
-console.log(revokeTicket(visitor))
+
+console.log(ticketStatus(tickets, 'RE90VAW7'))
+console.log(ticketStatus(tickets, '0H2AZ123'))
+console.log(ticketStatus(tickets, '23LA9T41'))
 // ==================
