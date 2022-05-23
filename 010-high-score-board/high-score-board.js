@@ -6,8 +6,12 @@
  *
  * @returns {Record<string, number>} new score board
  */
-export function createScoreBoard() {
-  throw new Error('Please implement the createScoreBoard function')
+function createScoreBoard(key, value) {
+  const newObj = {
+    'The Best Ever': 1000000,
+  }
+
+  return newObj
 }
 
 /**
@@ -66,5 +70,5 @@ function normalizeScore(params) {
 }
 
 // ==================
-
+console.log(createScoreBoard())
 // ==================
