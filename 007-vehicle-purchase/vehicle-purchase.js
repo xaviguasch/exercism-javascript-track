@@ -69,6 +69,7 @@ function calculateResellPrice(originalPrice, age) {
 // console.log(chooseVehicle('Wuling Hongguang', 'Toyota Corolla'))
 // console.log(chooseVehicle('Volkswagen Beetle', 'Volkswagen Golf'))
 // ==================
-console.log(calculateResellPrice(1000, 1))
-console.log(calculateResellPrice(1000, 5))
-console.log(calculateResellPrice(1000, 15))
+// console.log(calculateResellPrice(1000, 1))
+// console.log(calculateResellPrice(1000, 5))
+// console.log(calculateResellPrice(1000, 15))
+// ==================

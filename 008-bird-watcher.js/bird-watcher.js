@@ -11,7 +11,12 @@
  * @returns {number} total bird count
  */
 function totalBirdCount(birdsPerDay) {
-  throw new Error('Please implement the totalBirdCount function')
+  let count = 0
+  for (let i = 0; i < birdsPerDay.length; i++) {
+    count += birdsPerDay[i]
+  }
+
+  return count
 }
 
 /**
@@ -35,3 +40,10 @@ function birdsInWeek(birdsPerDay, week) {
 function fixBirdCountLog(birdsPerDay) {
   throw new Error('Please implement the fixBirdCountLog function')
 }
+
+// ==================
+const birdsPerDay = [2, 5, 0, 7, 4, 1, 3, 0, 2, 5, 0, 1, 3, 1]
+console.log(totalBirdCount(birdsPerDay))
+// ==================
+
+// ==================
