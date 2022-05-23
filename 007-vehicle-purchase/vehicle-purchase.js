@@ -23,10 +23,12 @@ function needsLicense(kind) {
  * @returns {string} a sentence of advice which option to choose
  */
 function chooseVehicle(option1, option2) {
+  let sentence = 'is clearly the better choice'
+
   if (option1.toLowerCase() < option2.toLowerCase()) {
-    return `${option1} is clearly the better choice.`
+    return `${option1} ${sentence}.`
   } else {
-    return `${option2} is clearly the better choice.`
+    return `${option2} ${sentence}.`
   }
 }
 
