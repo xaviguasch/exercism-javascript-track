@@ -23,7 +23,11 @@ function needsLicense(kind) {
  * @returns {string} a sentence of advice which option to choose
  */
 function chooseVehicle(option1, option2) {
-  throw new Error('Please implement the chooseVehicle function')
+  if (option1.toLowerCase() < option2.toLowerCase()) {
+    return `${option1} is clearly the better choice.`
+  } else {
+    return `${option2} is clearly the better choice.`
+  }
 }
 
 /**
@@ -39,6 +43,8 @@ function calculateResellPrice(originalPrice, age) {
 }
 
 // ==================
-console.log(needsLicense('car'))
-console.log(needsLicense('bike'))
+// console.log(needsLicense('car'))
+// console.log(needsLicense('bike'))
 // ==================
+console.log(chooseVehicle('Wuling Hongguang', 'Toyota Corolla'))
+console.log(chooseVehicle('Volkswagen Beetle', 'Volkswagen Golf'))
