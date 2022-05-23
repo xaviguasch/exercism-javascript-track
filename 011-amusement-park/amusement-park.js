@@ -71,7 +71,7 @@ function simpleTicketStatus(tickets, ticketId) {
  * @returns {string | undefined} version
  */
 function gtcVersion(visitor) {
-  throw new Error('Please implement the gtcVersion function.')
+  return visitor.gtc?.version
 }
 
 // ==================
@@ -93,12 +93,32 @@ function gtcVersion(visitor) {
 // console.log(ticketStatus(tickets, '0H2AZ123'))
 // console.log(ticketStatus(tickets, '23LA9T41'))
 // ==================
-const tickets = {
-  '0H2AZ123': null,
-  '23LA9T41': 'Verena Nardi',
+// const tickets = {
+//   '0H2AZ123': null,
+//   '23LA9T41': 'Verena Nardi',
+// }
+
+// console.log(simpleTicketStatus(tickets, '23LA9T41'))
+// console.log(simpleTicketStatus(tickets, '0H2AZ123'))
+// console.log(simpleTicketStatus(tickets, 'RE90VAW7'))
+// ==================
+const visitorNew = {
+  name: 'Verena Nardi',
+  age: 45,
+  ticketId: 'H32AZ123',
+  gtc: {
+    signed: true,
+    version: '2.1',
+  },
 }
 
-console.log(simpleTicketStatus(tickets, '23LA9T41'))
-console.log(simpleTicketStatus(tickets, '0H2AZ123'))
-console.log(simpleTicketStatus(tickets, 'RE90VAW7'))
+console.log(gtcVersion(visitorNew))
+
+const visitorOld = {
+  name: 'Verena Nardi',
+  age: 45,
+  ticketId: 'H32AZ123',
+}
+
+console.log(gtcVersion(visitorOld))
 // ==================
