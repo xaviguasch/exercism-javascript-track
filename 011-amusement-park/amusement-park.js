@@ -26,7 +26,9 @@ function createVisitor(name, age, ticketId) {
  * @returns {Visitor} the visitor without a ticket
  */
 function revokeTicket(visitor) {
-  throw new Error('Please implement the revokeTicket function.')
+  visitor['ticketId'] = null
+
+  return visitor
 }
 
 /**
@@ -63,7 +65,12 @@ function gtcVersion(visitor) {
 }
 
 // ==================
-console.log(createVisitor('Verena Nardi', 45, 'H32AZ123'))
+// console.log(createVisitor('Verena Nardi', 45, 'H32AZ123'))
 // ==================
-
+const visitor = {
+  name: 'Verena Nardi',
+  age: 45,
+  ticketId: 'H32AZ123',
+}
+console.log(revokeTicket(visitor))
 // ==================
