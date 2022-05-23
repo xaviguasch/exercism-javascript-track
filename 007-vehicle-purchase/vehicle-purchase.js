@@ -12,6 +12,10 @@
  */
 function needsLicense(kind) {
   return kind === 'car' || kind === 'truck'
+
+  // More optimal solution
+  // const VEHICLES_WITH_LICENSES = ['car', 'truck']
+  // return VEHICLES_WITH_LICENSES.includes(kind)
 }
 
 /**
@@ -30,6 +34,9 @@ function chooseVehicle(option1, option2) {
   } else {
     return `${option2} ${sentence}.`
   }
+
+  // More optimal solution
+  // return (option1 > option2 ? option2 : option1) + " is clearly the better choice."
 }
 
 /**
@@ -48,6 +55,11 @@ function calculateResellPrice(originalPrice, age) {
   } else {
     return originalPrice * 0.5
   }
+
+  // More optimal solution
+  // const discount = age < 3 ? 0.2 : age > 10 ? 0.5 : 0.3
+
+  // return originalPrice * (1 - discount)
 }
 
 // ==================
