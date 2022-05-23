@@ -10,7 +10,13 @@
  * @returns {Visitor} the visitor that was created
  */
 function createVisitor(name, age, ticketId) {
-  throw new Error('Please implement the createVisitor function.')
+  const visitor = {
+    name,
+    age,
+    ticketId,
+  }
+
+  return visitor
 }
 
 /**
@@ -55,3 +61,9 @@ function simpleTicketStatus(tickets, ticketId) {
 function gtcVersion(visitor) {
   throw new Error('Please implement the gtcVersion function.')
 }
+
+// ==================
+console.log(createVisitor('Verena Nardi', 45, 'H32AZ123'))
+// ==================
+
+// ==================
