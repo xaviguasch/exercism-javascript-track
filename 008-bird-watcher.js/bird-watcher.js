@@ -37,6 +37,9 @@ function birdsInWeek(birdsPerDay, week) {
   }
 
   return count
+
+  // ALTERNATIVE MORE ADVANCED SOLUTION
+  // return totalBirdCount(birdsPerDay.slice(week*7-7, week*7));
 }
 
 /**
@@ -54,6 +57,12 @@ function fixBirdCountLog(birdsPerDay) {
   }
 
   return birdsPerDay
+
+  // ALTERNATIVE MORE ADVANCED SOLUTION
+  // for (let i = 0; i < birdsPerDay.length; i += 2) {
+  //   birdsPerDay[i]++;
+  // }
+  // return birdsPerDay;
 }
 
 // ==================
