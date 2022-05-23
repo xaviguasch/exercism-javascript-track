@@ -62,7 +62,7 @@ function updateScore(scoreBoard, player, points) {
  * @returns {Record<string, number>} updated score board
  */
 function applyMondayBonus(scoreBoard) {
-  for (const name in scoreBoard) {
+  for (let name in scoreBoard) {
     scoreBoard[name] += 100
   }
 
