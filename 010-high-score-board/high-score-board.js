@@ -76,7 +76,7 @@ function applyMondayBonus(scoreBoard) {
  * @returns {number} normalized score
  */
 function normalizeScore(params) {
-  throw new Error('Please implement the normalizeScore function')
+  return params.normalizeFunction(params.score)
 }
 
 // ==================
@@ -89,13 +89,18 @@ function normalizeScore(params) {
 // ==================
 // console.log(updateScore({ 'Freyja Ćirić': 12771008 }, 'Freyja Ćirić', 73))
 // ==================
-const scoreBoard = {
-  'Dave Thomas': 44,
-  'Freyja Ćirić': 539,
-  'José Valim': 265,
-}
-console.log(applyMondayBonus(scoreBoard))
-
+// const scoreBoard = {
+//   'Dave Thomas': 44,
+//   'Freyja Ćirić': 539,
+//   'José Valim': 265,
+// }
+// console.log(applyMondayBonus(scoreBoard))
 // ==================
+// function normalize(score) {
+//   return 2 * score + 10
+// }
 
+// const params = { score: 400, normalizeFunction: normalize }
+
+// console.log(normalizeScore(params))
 // ==================
