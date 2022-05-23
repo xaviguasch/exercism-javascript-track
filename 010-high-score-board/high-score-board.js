@@ -50,7 +50,9 @@ function removePlayer(scoreBoard, player) {
  * @returns {Record<string, number>} updated score board
  */
 function updateScore(scoreBoard, player, points) {
-  throw new Error('Please implement the updateScore function')
+  scoreBoard[player] += points
+
+  return scoreBoard
 }
 
 /**
@@ -78,5 +80,9 @@ function normalizeScore(params) {
 // ==================
 // console.log(addPlayer({ 'Dave Thomas': 0 }, 'José Valim', 486373))
 // ==================
-console.log(removePlayer({ 'Dave Thomas': 0 }, 'Dave Thomas'))
-console.log(removePlayer({ 'Dave Thomas': 0 }, 'Rose Fanaras'))
+// console.log(removePlayer({ 'Dave Thomas': 0 }, 'Dave Thomas'))
+// console.log(removePlayer({ 'Dave Thomas': 0 }, 'Rose Fanaras'))
+// ==================
+
+console.log(updateScore({ 'Freyja Ćirić': 12771008 }, 'Freyja Ćirić', 73))
+// ==================
