@@ -69,13 +69,28 @@ function limesToCut(wedgesNeeded, limes) {
  * @returns {string[]} remaining orders after the time is up
  */
 function remainingOrders(timeLeft, orders) {
-  throw new Error('Please implement the remainingOrders function')
+  const ordersLeft = [...orders]
+  let timeBeforeEnd = timeLeft
+  let i = 0
+
+  while (timeBeforeEnd > 0) {
+    const juicingTime = timeToMixJuice(orders[i])
+
+    timeBeforeEnd -= juicingTime
+
+    i++
+  }
+
+  return ordersLeft.slice(i)
 }
 
 // ==================
 // console.log(timeToMixJuice('Tropical Island'))
 // console.log(timeToMixJuice('Berries & Lime'))
 // ==================
-console.log(limesToCut(25, ['small', 'small', 'large', 'medium', 'small']))
-console.log(limesToCut(10, []))
+// console.log(limesToCut(25, ['small', 'small', 'large', 'medium', 'small']))
+// console.log(limesToCut(10, []))
+// console.log(limesToCut(4, ['medium', 'small']))
+// ==================
+// console.log(remainingOrders(5, ['Energizer', 'All or Nothing', 'Green Garden']))
 // ==================
