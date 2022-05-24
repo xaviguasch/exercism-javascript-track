@@ -35,12 +35,24 @@ function luckyNumber(value) {
  * @returns {string} error message
  */
 function errorMessage(input) {
-  throw new Error('Implement the errorMessage function')
+  if (!Boolean(input)) {
+    return 'Required field'
+  } else if (!Number(input)) {
+    return 'Must be a number besides 0'
+  } else {
+    return ''
+  }
 }
 
 // ==================
 // console.log(twoSum([1, 2, 3], [0, 7]))
 // ==================
-console.log(luckyNumber(1441))
-console.log(luckyNumber(123))
+// console.log(luckyNumber(1441))
+// console.log(luckyNumber(123))
+// ==================
+// console.log(errorMessage('123'))
+// console.log(errorMessage(''))
+// console.log(errorMessage('abc'))
+// console.log(errorMessage(null))
+// console.log(errorMessage(undefined))
 // ==================
