@@ -12,6 +12,9 @@ function twoSum(array1, array2) {
   const sum2 = array2.map((num) => String(num)).reduce((acc, currV) => acc + currV)
 
   return Number(sum1) + Number(sum2)
+
+  // ALTERNATIVE SOLUTION
+  // return Number(array1.join('')) + Number(array2.join(''))
 }
 
 /**
@@ -25,6 +28,9 @@ function luckyNumber(value) {
   const valueArrReversed = [...valueArr].reverse()
 
   return valueArr.join('') === valueArrReversed.join('')
+
+  // ALTERNATIVE SOLUTION
+  // return value == [...String(value)].reverse().join('');
 }
 
 /**
@@ -42,6 +48,11 @@ function errorMessage(input) {
   } else {
     return ''
   }
+
+  // ALTERNATIVE SOLUTION
+  // if(!input) return 'Required field'
+  // if(!Number(input) || Number(input) === 0) return 'Must be a number besides 0'
+  // return '';
 }
 
 // ==================
