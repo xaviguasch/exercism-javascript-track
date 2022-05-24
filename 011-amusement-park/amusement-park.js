@@ -105,23 +105,23 @@ function gtcVersion(visitor) {
 // console.log(simpleTicketStatus(tickets, '0H2AZ123'))
 // console.log(simpleTicketStatus(tickets, 'RE90VAW7'))
 // ==================
-const visitorNew = {
-  name: 'Verena Nardi',
-  age: 45,
-  ticketId: 'H32AZ123',
-  gtc: {
-    signed: true,
-    version: '2.1',
-  },
-}
+// const visitorNew = {
+//   name: 'Verena Nardi',
+//   age: 45,
+//   ticketId: 'H32AZ123',
+//   gtc: {
+//     signed: true,
+//     version: '2.1',
+//   },
+// }
 
-console.log(gtcVersion(visitorNew))
+// console.log(gtcVersion(visitorNew))
 
-const visitorOld = {
-  name: 'Verena Nardi',
-  age: 45,
-  ticketId: 'H32AZ123',
-}
+// const visitorOld = {
+//   name: 'Verena Nardi',
+//   age: 45,
+//   ticketId: 'H32AZ123',
+// }
 
-console.log(gtcVersion(visitorOld))
+// console.log(gtcVersion(visitorOld))
 // ==================
