@@ -8,7 +8,10 @@
  * @returns {number} sum of the two arrays
  */
 function twoSum(array1, array2) {
-  throw new Error('Implement the twoSum function')
+  const sum1 = array1.map((num) => String(num)).reduce((acc, currV) => acc + currV)
+  const sum2 = array2.map((num) => String(num)).reduce((acc, currV) => acc + currV)
+
+  return Number(sum1) + Number(sum2)
 }
 
 /**
@@ -31,3 +34,8 @@ function luckyNumber(value) {
 function errorMessage(input) {
   throw new Error('Implement the errorMessage function')
 }
+
+// ==================
+console.log(twoSum([1, 2, 3], [0, 7]))
+// ==================
+// ==================
