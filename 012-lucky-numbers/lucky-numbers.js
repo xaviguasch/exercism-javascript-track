@@ -21,7 +21,10 @@ function twoSum(array1, array2) {
  * @returns {boolean}  whether the number is a palindrome or not
  */
 function luckyNumber(value) {
-  throw new Error('Implement the luckyNumber function')
+  const valueArr = String(value).split('')
+  const valueArrReversed = [...valueArr].reverse()
+
+  return valueArr.join('') === valueArrReversed.join('')
 }
 
 /**
@@ -36,6 +39,8 @@ function errorMessage(input) {
 }
 
 // ==================
-console.log(twoSum([1, 2, 3], [0, 7]))
+// console.log(twoSum([1, 2, 3], [0, 7]))
 // ==================
+console.log(luckyNumber(1441))
+console.log(luckyNumber(123))
 // ==================
