@@ -54,7 +54,7 @@ Class of ${year}`
  */
 
 function costOf(sign, currency) {
-  throw new Error('Implement the costOf function')
+  return `Your sign costs ${(sign.length * 2 + 20).toFixed(2)} ${currency}.`
 }
 
 // ==================
@@ -62,5 +62,7 @@ function costOf(sign, currency) {
 // ==================
 // console.log(buildBirthdaySign(45))
 // ==================
-console.log(graduationFor('Hannah', 2022))
+// console.log(graduationFor('Hannah', 2022))
+// ==================
+console.log(costOf('Happy Birthday Rob!', 'dollars'))
 // ==================
