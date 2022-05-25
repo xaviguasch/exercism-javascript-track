@@ -41,6 +41,12 @@ function quantities(layersArr) {
     noodles: noodlesGs,
     sauce: sauceLs,
   }
+
+  // ALTERNATIVE SOLUTION
+  // return {
+  //   noodles: layersArr.filter(i => i === 'noodles').length * 50,
+  //   sauce: layersArr.filter(i => i === 'sauce').length * 0.2,
+  // }
 }
 
 function addSecretIngredient(fList, personalList) {
@@ -73,12 +79,13 @@ function scaleRecipe(recipe, portions = 2) {
 // console.log(addSecretIngredient(friendsList, myList))
 // console.log(myList)
 // ==================
-const recipe = {
-  noodles: 200,
-  sauce: 0.5,
-  mozzarella: 1,
-  meat: 100,
-}
+// const recipe = {
+//   noodles: 200,
+//   sauce: 0.5,
+//   mozzarella: 1,
+//   meat: 100,
+// }
 
-console.log(scaleRecipe(recipe, 4))
-console.log(scaleRecipe(recipe))
+// console.log(scaleRecipe(recipe, 4))
+// console.log(scaleRecipe(recipe))
+// ==================
