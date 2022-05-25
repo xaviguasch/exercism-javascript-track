@@ -31,7 +31,9 @@ function translate2d(dx, dy) {
  *  scaled coordinate pair in the form [x, y]
  */
 function scale2d(sx, sy) {
-  throw new Error('Implement the scale2d function')
+  return function (x, y) {
+    return [x * sx, y * sy]
+  }
 }
 
 /**
@@ -67,5 +69,11 @@ function memoizeTransform(f) {
 // console.log(result)
 
 // ==================
+const doubleScale = scale2d(2, 2)
+const result = doubleScale(6, -3)
+console.log(result)
+const tripleScale = scale2d(3, 3)
+const result2 = tripleScale(6, -3)
+console.log(result2)
 // ==================
 // ==================
