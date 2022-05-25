@@ -12,7 +12,7 @@
  */
 
 function cookingStatus(remainingTime) {
-  if (!remainingTime) {
+  if (remainingTime === undefined) {
     return 'You forgot to set the timer.'
   } else if (remainingTime === 0) {
     return 'Lasagna is done.'
