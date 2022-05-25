@@ -10,3 +10,18 @@
  *   ...
  * }
  */
+
+function cookingStatus(remainingTime) {
+  if (!remainingTime) {
+    return 'You forgot to set the timer.'
+  } else if (remainingTime === 0) {
+    return 'Lasagna is done.'
+  } else {
+    return 'Not done, please wait.'
+  }
+}
+
+// ==================
+console.log(cookingStatus(12))
+console.log(cookingStatus())
+// ==================
