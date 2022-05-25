@@ -21,7 +21,14 @@ function cookingStatus(remainingTime) {
   }
 }
 
+function preparationTime(layers, avgTime = 2) {
+  return layers.length * avgTime
+}
+
 // ==================
-console.log(cookingStatus(12))
-console.log(cookingStatus())
+// console.log(cookingStatus(12))
+// console.log(cookingStatus())
 // ==================
+const layers = ['sauce', 'noodles', 'sauce', 'meat', 'mozzarella', 'noodles']
+console.log(preparationTime(layers, 3))
+console.log(preparationTime(layers))
