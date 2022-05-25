@@ -64,5 +64,5 @@ function costOf(sign, currency) {
 // ==================
 // console.log(graduationFor('Hannah', 2022))
 // ==================
-console.log(costOf('Happy Birthday Rob!', 'dollars'))
+// console.log(costOf('Happy Birthday Rob!', 'dollars'))
 // ==================
