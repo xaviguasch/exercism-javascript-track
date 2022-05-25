@@ -69,7 +69,22 @@ function composeTransformation(f, g) {
  *  if the arguments are the same on subsequent calls, or compute a new result if they are different.
  */
 function memoizeTransform(f) {
-  throw new Error('Implement the memoizeTransform function')
+  let lastX = undefined
+  let lastY = undefined
+  let lastResult = undefined
+
+  return function (x, y) {
+    if (x === lastX && y === lastY) {
+      console.log('second call!')
+      return lastResult
+    }
+
+    lastX = x
+    lastY = y
+    lastResult = f(x, y)
+    console.log('first call!')
+    return lastResult
+  }
 }
 
 // ==================
@@ -85,12 +100,17 @@ function memoizeTransform(f) {
 // const result2 = tripleScale(6, -3)
 // console.log(result2)
 // ==================
-const moveCoordinatesRight2Px = translate2d(2, 0)
-const doubleCoordinates = scale2d(2, 2)
-const composedTransformations = composeTransformation(
-  moveCoordinatesRight2Px,
-  doubleCoordinates
-)
-const result = composedTransformations(0, 1)
-console.log(result)
+// const moveCoordinatesRight2Px = translate2d(2, 0)
+// const doubleCoordinates = scale2d(2, 2)
+// const composedTransformations = composeTransformation(
+//   moveCoordinatesRight2Px,
+//   doubleCoordinates
+// )
+// const result = composedTransformations(0, 1)
+// console.log(result)
 // ==================
+const tripleScale = scale2d(3, 3)
+const memoizedScale = memoizeTransform(tripleScale)
+
+console.log(memoizedScale(4, 3))
+console.log(memoizedScale(4, 3))
