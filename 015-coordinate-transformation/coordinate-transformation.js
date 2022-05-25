@@ -51,6 +51,12 @@ function composeTransformation(f, g) {
     const firstFuncCallResultArr = f(x, y)
     return g(...firstFuncCallResultArr)
   }
+
+  // alternate solution
+  // return function (x, y) {
+  //   const fResult = f(x, y)
+  //   return g(fResult[0], fResult[1])
+  // }
 }
 
 /**
