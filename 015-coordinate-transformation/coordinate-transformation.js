@@ -109,8 +109,9 @@ function memoizeTransform(f) {
 // const result = composedTransformations(0, 1)
 // console.log(result)
 // ==================
-const tripleScale = scale2d(3, 3)
-const memoizedScale = memoizeTransform(tripleScale)
+// const tripleScale = scale2d(3, 3)
+// const memoizedScale = memoizeTransform(tripleScale)
 
-console.log(memoizedScale(4, 3))
-console.log(memoizedScale(4, 3))
+// console.log(memoizedScale(4, 3))
+// console.log(memoizedScale(4, 3))
+// ==================
