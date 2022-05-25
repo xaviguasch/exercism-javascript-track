@@ -39,7 +39,8 @@ function buildBirthdaySign(age) {
  */
 
 function graduationFor(name, year) {
-  throw new Error('Implement the graduationForm function')
+  return `Congratulations ${name}!
+Class of ${year}`
 }
 
 /**
@@ -59,4 +60,7 @@ function costOf(sign, currency) {
 // ==================
 // console.log(buildSign('Birthday', 'Rob'))
 // ==================
-console.log(buildBirthdaySign(45))
+// console.log(buildBirthdaySign(45))
+// ==================
+console.log(graduationFor('Hannah', 2022))
+// ==================
