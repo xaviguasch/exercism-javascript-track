@@ -15,7 +15,9 @@
  *  translated coordinate pair in the form [x, y]
  */
 function translate2d(dx, dy) {
-  throw new Error('Implement the translate2d function')
+  return function (x, y) {
+    return [x + dx, y + dy]
+  }
 }
 
 /**
@@ -60,6 +62,9 @@ function memoizeTransform(f) {
 }
 
 // ==================
+// const moveCoordinatesRight2Px = translate2d(2, 0)
+// const result = moveCoordinatesRight2Px(4, 8)
+// console.log(result)
 
 // ==================
 // ==================
