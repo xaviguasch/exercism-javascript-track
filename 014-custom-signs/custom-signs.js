@@ -26,7 +26,7 @@ function buildSign(occasion, name) {
  */
 
 function buildBirthdaySign(age) {
-  throw new Error('Implement the buildBirthdaySign function')
+  return `Happy Birthday! What a ${age >= 50 ? 'mature' : 'young'} fellow you are.`
 }
 
 /**
@@ -57,5 +57,6 @@ function costOf(sign, currency) {
 }
 
 // ==================
-console.log(buildSign('Birthday', 'Rob'))
+// console.log(buildSign('Birthday', 'Rob'))
 // ==================
+console.log(buildBirthdaySign(45))
