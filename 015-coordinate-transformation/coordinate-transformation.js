@@ -46,8 +46,11 @@ function scale2d(sx, sy) {
  * @returns {function} a function which takes an x, y parameter, returns the
  *  transformed coordinate pair in the form [x, y]
  */
-function composeTransform(f, g) {
-  throw new Error('Implement the composeTransform function')
+function composeTransformation(f, g) {
+  return function (x, y) {
+    const firstFuncCallResultArr = f(x, y)
+    return g(...firstFuncCallResultArr)
+  }
 }
 
 /**
@@ -69,11 +72,19 @@ function memoizeTransform(f) {
 // console.log(result)
 
 // ==================
-const doubleScale = scale2d(2, 2)
-const result = doubleScale(6, -3)
-console.log(result)
-const tripleScale = scale2d(3, 3)
-const result2 = tripleScale(6, -3)
-console.log(result2)
+// const doubleScale = scale2d(2, 2)
+// const result = doubleScale(6, -3)
+// console.log(result)
+// const tripleScale = scale2d(3, 3)
+// const result2 = tripleScale(6, -3)
+// console.log(result2)
 // ==================
+const moveCoordinatesRight2Px = translate2d(2, 0)
+const doubleCoordinates = scale2d(2, 2)
+const composedTransformations = composeTransformation(
+  moveCoordinatesRight2Px,
+  doubleCoordinates
+)
+const result = composedTransformations(0, 1)
+console.log(result)
 // ==================
