@@ -14,7 +14,7 @@
  */
 
 function buildSign(occasion, name) {
-  throw new Error('Implement the buildSign function')
+  return `Happy ${occasion} ${name}!`
 }
 
 /**
@@ -55,3 +55,7 @@ function graduationFor(name, year) {
 function costOf(sign, currency) {
   throw new Error('Implement the costOf function')
 }
+
+// ==================
+console.log(buildSign('Birthday', 'Rob'))
+// ==================
