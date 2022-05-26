@@ -125,7 +125,7 @@ function purchaseInventoryIfAvailable(err, isAvailable) {
  * @return {AvailabilityAction} whether the fruit was purchased 'PURCHASE' or 'NOOP'
  */
 function pickAndPurchaseFruit(variety, quantity) {
-  throw new Error('Implement the pickAndPurchaseFruit function')
+  return pickFruit(variety, quantity, purchaseInventoryIfAvailable)
 }
 
 // ==================
@@ -139,4 +139,6 @@ function pickAndPurchaseFruit(variety, quantity) {
 // console.log(purchaseInventoryIfAvailable('Server Offline', undefined))
 // console.log(purchaseInventoryIfAvailable(null, true))
 // console.log(purchaseInventoryIfAvailable(null, false))
+// ==================
+console.log(pickAndPurchaseFruit('Red Delicious Apples', 42))
 // ==================
