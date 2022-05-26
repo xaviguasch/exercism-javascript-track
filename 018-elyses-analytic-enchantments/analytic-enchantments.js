@@ -39,7 +39,7 @@ function doesStackIncludeCard(stack, card) {
  * @returns {boolean} true if all cards are even, false otherwise
  */
 function isEachCardEven(stack) {
-  throw new Error('Implement the isEachCardEven function')
+  return stack.every((card) => card % 2 === 0)
 }
 
 /**
@@ -79,5 +79,7 @@ function getFirstEvenCardPosition(stack) {
 // const card = 2
 // console.log(getCardPosition([9, 7, 3, 2], card))
 // ==================
-const card = 3
-console.log(doesStackIncludeCard([2, 3, 4, 5], card))
+// const card = 3
+// console.log(doesStackIncludeCard([2, 3, 4, 5], card))
+// ==================
+console.log(isEachCardEven([2, 4, 6, 7]))
