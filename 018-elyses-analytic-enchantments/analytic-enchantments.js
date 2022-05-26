@@ -13,7 +13,10 @@
  * @returns {number} position of the card in the stack
  */
 function getCardPosition(stack, card) {
-  throw new Error('Implement the getCardPosition function')
+  return stack.findIndex((c) => c === card)
+
+  // Alternate solution using indexOC
+  // return stack.indexOf(card)
 }
 
 /**
@@ -25,7 +28,7 @@ function getCardPosition(stack, card) {
  * @returns {boolean} true if card is in the stack, false otherwise
  */
 function doesStackIncludeCard(stack, card) {
-  throw new Error('Implement the doesStackIncludeCard function')
+  return stack.includes(card)
 }
 
 /**
@@ -68,6 +71,13 @@ function getFirstOddCard(stack) {
  *
  * @returns {number} position of the first card that is even
  */
-export function getFirstEvenCardPosition(stack) {
+function getFirstEvenCardPosition(stack) {
   throw new Error('Implement the getFirstEvenCardPosition function')
 }
+
+// ==================
+// const card = 2
+// console.log(getCardPosition([9, 7, 3, 2], card))
+// ==================
+const card = 3
+console.log(doesStackIncludeCard([2, 3, 4, 5], card))
