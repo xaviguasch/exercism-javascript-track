@@ -90,8 +90,6 @@ function isServiceOnline() {
   return checkStatus((status) => status === 'ONLINE')
 }
 
-console.log(isServiceOnline())
-
 /**
  * Pick a fruit using the checkInventory API
  *
@@ -101,7 +99,7 @@ console.log(isServiceOnline())
  * @return {AvailabilityAction} the result from checkInventory
  */
 function pickFruit(variety, quantity, callback) {
-  throw new Error('Implement the pickFruit function')
+  return checkInventory({ variety, quantity }, callback)
 }
 
 /**
@@ -125,3 +123,11 @@ function purchaseInventoryIfAvailable(err, isAvailable) {
 function pickAndPurchaseFruit(variety, quantity) {
   throw new Error('Implement the pickAndPurchaseFruit function')
 }
+
+// ==================
+// console.log(isServiceOnline())
+// ==================
+function action(err, data) {
+  // logic
+}
+console.log(pickFruit('pineapple', 20, action))
