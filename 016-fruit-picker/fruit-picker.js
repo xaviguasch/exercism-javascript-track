@@ -87,8 +87,10 @@ function checkInventory(query, callback) {
  * @return {boolean}
  */
 function isServiceOnline() {
-  throw new Error('Implement the isServiceOnline function')
+  return checkStatus((status) => status === 'ONLINE')
 }
+
+console.log(isServiceOnline())
 
 /**
  * Pick a fruit using the checkInventory API
