@@ -49,7 +49,9 @@ function swapTopTwoCards(deck) {
  * deck and a new deck containing all the other cards
  */
 function discardTopCard(deck) {
-  throw new Error('Implement the discardTopCard function')
+  const [first, ...restDeck] = deck
+
+  return [first, restDeck]
 }
 
 /** @type Card[] **/
@@ -76,4 +78,7 @@ function insertFaceCards(deck) {
 // ==================
 // const deck = [10, 7, 3, 8, 5]
 // console.log(swapTopTwoCards(deck))
+// ==================
+const deck = [2, 5, 4, 9, 3]
+console.log(discardTopCard(deck))
 // ==================
