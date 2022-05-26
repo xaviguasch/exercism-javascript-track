@@ -9,7 +9,9 @@
  * @returns {Card} the first card in the deck
  */
 function getFirstCard(deck) {
-  throw new Error('Implement the getFirstCard function')
+  const [firstCard, ...restOfDeck] = deck
+
+  return firstCard
 }
 
 /**
@@ -60,3 +62,8 @@ const FACE_CARDS = ['jack', 'queen', 'king']
 function insertFaceCards(deck) {
   throw new Error('Implement the insertFaceCards function')
 }
+
+// ==================
+const deck = [5, 9, 7, 1, 8]
+console.log(getFirstCard(deck))
+// ==================
