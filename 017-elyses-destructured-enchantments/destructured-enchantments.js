@@ -22,7 +22,9 @@ function getFirstCard(deck) {
  * @returns {Card} the second card in the deck
  */
 function getSecondCard(deck) {
-  throw new Error('Implement the getSecondCard function')
+  const [first, second, ...restDeck] = deck
+
+  return second
 }
 
 /**
@@ -64,6 +66,9 @@ function insertFaceCards(deck) {
 }
 
 // ==================
-const deck = [5, 9, 7, 1, 8]
-console.log(getFirstCard(deck))
+// const deck = [5, 9, 7, 1, 8]
+// console.log(getFirstCard(deck))
+// ==================
+const deck = [3, 2, 10, 6, 7]
+console.log(getSecondCard(deck))
 // ==================
