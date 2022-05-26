@@ -66,7 +66,9 @@ const FACE_CARDS = ['jack', 'queen', 'king']
  * third, and fourth cards are the face cards
  */
 function insertFaceCards(deck) {
-  throw new Error('Implement the insertFaceCards function')
+  const [first, ...restDeck] = deck
+
+  return [first, ...FACE_CARDS, ...restDeck]
 }
 
 // ==================
@@ -79,6 +81,9 @@ function insertFaceCards(deck) {
 // const deck = [10, 7, 3, 8, 5]
 // console.log(swapTopTwoCards(deck))
 // ==================
-const deck = [2, 5, 4, 9, 3]
-console.log(discardTopCard(deck))
+// const deck = [2, 5, 4, 9, 3]
+// console.log(discardTopCard(deck))
+// ==================
+// const deck = [5, 4, 7, 10]
+// console.log(insertFaceCards(deck))
 // ==================
