@@ -50,7 +50,7 @@ function isEachCardEven(stack) {
  * @returns {boolean} true if the array contains odd card, false otherwise
  */
 function doesStackIncludeOddCard(stack) {
-  throw new Error('Implement the doesStackIncludesOddCard function')
+  return stack.some((card) => card % 2 !== 0)
 }
 
 /**
@@ -82,4 +82,7 @@ function getFirstEvenCardPosition(stack) {
 // const card = 3
 // console.log(doesStackIncludeCard([2, 3, 4, 5], card))
 // ==================
-console.log(isEachCardEven([2, 4, 6, 7]))
+// console.log(isEachCardEven([2, 4, 6, 7]))
+// ==================
+// console.log(doesStackIncludeOddCard([3, 2, 6, 4, 8]))
+// ==================
