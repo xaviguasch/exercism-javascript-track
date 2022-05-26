@@ -35,7 +35,9 @@ function getSecondCard(deck) {
  * @returns {Card[]} new deck with reordered cards
  */
 function swapTopTwoCards(deck) {
-  throw new Error('Implement the swapTopTwoCards function')
+  const [firstCard, secondCard, ...restDeck] = deck
+
+  return [secondCard, firstCard, ...restDeck]
 }
 
 /**
@@ -69,6 +71,9 @@ function insertFaceCards(deck) {
 // const deck = [5, 9, 7, 1, 8]
 // console.log(getFirstCard(deck))
 // ==================
-const deck = [3, 2, 10, 6, 7]
-console.log(getSecondCard(deck))
+// const deck = [3, 2, 10, 6, 7]
+// console.log(getSecondCard(deck))
+// ==================
+// const deck = [10, 7, 3, 8, 5]
+// console.log(swapTopTwoCards(deck))
 // ==================
