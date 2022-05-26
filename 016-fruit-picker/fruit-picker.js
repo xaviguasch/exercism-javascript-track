@@ -140,5 +140,5 @@ function pickAndPurchaseFruit(variety, quantity) {
 // console.log(purchaseInventoryIfAvailable(null, true))
 // console.log(purchaseInventoryIfAvailable(null, false))
 // ==================
-console.log(pickAndPurchaseFruit('Red Delicious Apples', 42))
+// console.log(pickAndPurchaseFruit('Red Delicious Apples', 42))
 // ==================
