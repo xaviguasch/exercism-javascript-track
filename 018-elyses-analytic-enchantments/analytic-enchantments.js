@@ -13,10 +13,10 @@
  * @returns {number} position of the card in the stack
  */
 function getCardPosition(stack, card) {
-  return stack.findIndex((c) => c === card)
+  return stack.indexOf(card)
 
-  // Alternate solution using indexOC
-  // return stack.indexOf(card)
+  // Alternate solution using findIndex, not really necessary here as indexOf suffices
+  // return stack.findIndex((c) => c === card)
 }
 
 /**
@@ -61,7 +61,7 @@ function doesStackIncludeOddCard(stack) {
  * @returns {number} the first odd value
  */
 function getFirstOddCard(stack) {
-  throw new Error('Implement the getFirstOddCard function')
+  return stack.find((card) => card % 2 !== 0)
 }
 
 /**
@@ -72,7 +72,7 @@ function getFirstOddCard(stack) {
  * @returns {number} position of the first card that is even
  */
 function getFirstEvenCardPosition(stack) {
-  throw new Error('Implement the getFirstEvenCardPosition function')
+  return stack.findIndex((card) => card % 2 === 0)
 }
 
 // ==================
@@ -85,4 +85,8 @@ function getFirstEvenCardPosition(stack) {
 // console.log(isEachCardEven([2, 4, 6, 7]))
 // ==================
 // console.log(doesStackIncludeOddCard([3, 2, 6, 4, 8]))
+// ==================
+// console.log(getFirstOddCard([4, 2, 8, 7, 9]))
+// ==================
+// console.log(getFirstEvenCardPosition([5, 2, 3, 1]))
 // ==================
