@@ -8,15 +8,15 @@
 
 // TASK 1
 
-// function Size(width = 80, height = 60) {
-//   this.width = width
-//   this.height = height
-// }
+function Size(width = 80, height = 60) {
+  this.width = width
+  this.height = height
+}
 
-// Size.prototype.resize = function (newWidth, newHeight) {
-//   this.width = newWidth
-//   this.height = newHeight
-// }
+Size.prototype.resize = function (newWidth, newHeight) {
+  this.width = newWidth
+  this.height = newHeight
+}
 
 // TASK 2
 
@@ -28,6 +28,16 @@ function Position(x = 0, y = 0) {
 Position.prototype.move = function (newX, newY) {
   this.x = newX
   this.y = newY
+}
+
+// TASK 3
+
+class ProgramWindow {
+  constructor() {
+    this.screenSize = new Size(800, 600)
+    this.size = new Size()
+    this.position = new Position()
+  }
 }
 
 // ==================
@@ -44,16 +54,23 @@ Position.prototype.move = function (newX, newY) {
 // ==================
 // 2 -
 
-const point = new Position()
-console.log(point.x)
-console.log(point.y)
+// const point = new Position()
+// console.log(point.x)
+// console.log(point.y)
 
-point.move(100, 200)
-console.log(point.x)
-console.log(point.y)
+// point.move(100, 200)
+// console.log(point.x)
+// console.log(point.y)
 
 // ==================
 // 3 -
+
+const programWindow = new ProgramWindow()
+console.log(programWindow.screenSize.width)
+console.log(programWindow.screenSize.height)
+console.log(programWindow.size)
+console.log(programWindow.position)
+
 // ==================
 // 4 -
 // ==================
