@@ -79,7 +79,7 @@ function twoIsSpecial(deck) {
  * @returns {number[]} ordered deck
  */
 function perfectlyOrdered(deck) {
-  throw new Error('Implement the perfectlyOrdered function')
+  return deck.sort((a, b) => a - b)
 }
 
 /**
@@ -108,4 +108,7 @@ function reorder(deck) {
 // ==================
 // const deck = [1, 2, 3, 4, 10, 2]
 // console.log(twoIsSpecial(deck))
+// ==================
+// const deck = [10, 1, 5, 3, 2, 8, 7]
+// console.log(perfectlyOrdered(deck))
 // ==================
