@@ -8,7 +8,7 @@
  * @returns {number[]} deck with every card doubled
  */
 function seeingDouble(deck) {
-  throw new Error('Implement the seeingDouble function')
+  return deck.map((card) => card * 2)
 }
 
 /**
@@ -78,3 +78,8 @@ function perfectlyOrdered(deck) {
 function reorder(deck) {
   throw new Error('Implement the reorder function')
 }
+
+// ==================
+const deck = [1, 2, 3, 4, 10]
+console.log(seeingDouble(deck))
+// ==================
