@@ -51,7 +51,14 @@ function middleTwo(deck) {
  * @returns {number[]} transformed deck
  */
 
-function sandwichTrick(deck) {}
+function sandwichTrick(deck) {
+  const firstCard = deck.shift()
+  const lastCard = deck.pop()
+
+  deck.splice(deck.length / 2, 0, lastCard, firstCard)
+
+  return deck
+}
 
 /**
  * Removes every card from the deck except 2s.
@@ -96,3 +103,5 @@ function reorder(deck) {
 // const deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // console.log(middleTwo(deck))
 // ==================
+const deck = [1, 2, 3, 5, 6, 10]
+console.log(sandwichTrick(deck))
