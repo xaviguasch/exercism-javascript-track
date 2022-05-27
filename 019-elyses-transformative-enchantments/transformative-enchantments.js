@@ -29,6 +29,25 @@ function threeOfEachThree(deck) {
       }
     })
     .flat()
+
+  // ADDED ALTERNATIVE SOLUTION
+  // return deck.flatMap((card) => (card === 3 ? [card, card, card] : [card]))
+
+  // Instructions hint at reduce, which is more convulted in this case.
+  //
+  // flatMap is a recent addition to the array method belt, and is the same
+  // as a .map() followed by .flat() with a depth of 1.
+  //
+
+  // ADDED ALTERNATIVE SOLUTION USING REDUCE
+  // return deck.reduce((result, card) => {
+  //   if (card === 3) {
+  //     result.push(card, card, card)
+  //   } else {
+  //     result.push(card)
+  //   }
+  //   return result
+  // }, [])
 }
 
 /**
@@ -41,6 +60,10 @@ function threeOfEachThree(deck) {
  */
 function middleTwo(deck) {
   return deck.filter((card) => card === deck[4] || card === deck[5])
+
+  // ADDED ALTERNATIVE SOLUTION
+  // const middle = deck.length / 2
+  // return deck.slice(middle - 1, middle + 1)
 }
 
 /**
@@ -112,5 +135,5 @@ function reorder(deck) {
 // const deck = [10, 1, 5, 3, 2, 8, 7]
 // console.log(perfectlyOrdered(deck))
 // ==================
-const deck = [10, 1, 5, 3, 2]
-console.log(reorder(deck))
+// const deck = [10, 1, 5, 3, 2]
+// console.log(reorder(deck))
