@@ -40,7 +40,7 @@ function threeOfEachThree(deck) {
  * @returns {number[]} deck with only two middle cards
  */
 function middleTwo(deck) {
-  throw new Error('Implement the middleTwo function')
+  return deck.filter((card) => card === deck[4] || card === deck[5])
 }
 
 /**
@@ -51,9 +51,7 @@ function middleTwo(deck) {
  * @returns {number[]} transformed deck
  */
 
-function sandwichTrick(deck) {
-  throw new Error('Implement the sandwichTrick function')
-}
+function sandwichTrick(deck) {}
 
 /**
  * Removes every card from the deck except 2s.
@@ -92,6 +90,9 @@ function reorder(deck) {
 // const deck = [1, 2, 3, 4, 10]
 // console.log(seeingDouble(deck))
 // ==================
-const deck = [1, 3, 9, 3, 7]
-console.log(threeOfEachThree(deck))
+// const deck = [1, 3, 9, 3, 7]
+// console.log(threeOfEachThree(deck))
+// ==================
+// const deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// console.log(middleTwo(deck))
 // ==================
