@@ -68,7 +68,7 @@ function sandwichTrick(deck) {
  * @returns {number[]} deck with only 2s
  */
 function twoIsSpecial(deck) {
-  throw new Error('Implement the twoIsSpecial function')
+  return deck.filter((card) => card === 2)
 }
 
 /**
@@ -103,5 +103,9 @@ function reorder(deck) {
 // const deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // console.log(middleTwo(deck))
 // ==================
-const deck = [1, 2, 3, 5, 6, 10]
-console.log(sandwichTrick(deck))
+// const deck = [1, 2, 3, 5, 6, 10]
+// console.log(sandwichTrick(deck))
+// ==================
+// const deck = [1, 2, 3, 4, 10, 2]
+// console.log(twoIsSpecial(deck))
+// ==================
