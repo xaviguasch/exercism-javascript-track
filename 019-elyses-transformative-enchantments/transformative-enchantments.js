@@ -90,7 +90,7 @@ function perfectlyOrdered(deck) {
  * @returns {number[]} reordered deck
  */
 function reorder(deck) {
-  throw new Error('Implement the reorder function')
+  return deck.reverse()
 }
 
 // ==================
@@ -112,3 +112,5 @@ function reorder(deck) {
 // const deck = [10, 1, 5, 3, 2, 8, 7]
 // console.log(perfectlyOrdered(deck))
 // ==================
+const deck = [10, 1, 5, 3, 2]
+console.log(reorder(deck))
