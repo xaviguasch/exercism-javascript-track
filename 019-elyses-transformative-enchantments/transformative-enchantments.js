@@ -19,7 +19,16 @@ function seeingDouble(deck) {
  * @returns {number[]} deck with triplicate 3s
  */
 function threeOfEachThree(deck) {
-  throw new Error('Implement the threeOfEachThree function')
+  return deck
+    .map((card) => {
+      if (card === 3) {
+        const newArr = [card, card, card]
+        return newArr
+      } else {
+        return card
+      }
+    })
+    .flat()
 }
 
 /**
@@ -80,6 +89,9 @@ function reorder(deck) {
 }
 
 // ==================
-const deck = [1, 2, 3, 4, 10]
-console.log(seeingDouble(deck))
+// const deck = [1, 2, 3, 4, 10]
+// console.log(seeingDouble(deck))
+// ==================
+const deck = [1, 3, 9, 3, 7]
+console.log(threeOfEachThree(deck))
 // ==================
