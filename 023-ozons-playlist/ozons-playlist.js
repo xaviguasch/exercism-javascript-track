@@ -66,7 +66,16 @@ function deleteTrack(playlist, track) {
  * @returns {string[]} list of artists
  */
 function listArtists(playlist) {
-  throw new Error('Please implement the listArtists function')
+  const artistsArr = []
+
+  for (const song of playlist) {
+    const [title, artist] = song.split(' - ')
+    artistsArr.push(artist)
+  }
+
+  const artistsSet = new Set(artistsArr)
+
+  return Array.from(artistsSet)
 }
 
 // ==================
@@ -98,12 +107,20 @@ function listArtists(playlist) {
 // ==================
 // 4 -
 
-const playlist = ['The Treasure - Fra Lippo Lippi', 'After the Fall - Klaus Nomi']
+// const playlist = ['The Treasure - Fra Lippo Lippi', 'After the Fall - Klaus Nomi']
 
-console.log(deleteTrack(playlist, 'The Treasure - Fra Lippo Lippi'))
-console.log(deleteTrack(playlist, 'I Feel the Magic - Belinda Carlisle'))
+// console.log(deleteTrack(playlist, 'The Treasure - Fra Lippo Lippi'))
+// console.log(deleteTrack(playlist, 'I Feel the Magic - Belinda Carlisle'))
 
 // ==================
 // 5 -
+
+const playlist = [
+  'All Mine - Portishead',
+  'Sight to Behold - Devendra Banhart',
+  'Sour Times - Portishead',
+]
+
+console.log(listArtists(playlist))
 
 // ==================
