@@ -36,15 +36,27 @@ function determineOddEvenCards(stack, type) {
   }
 
   return type ? countEvens : countOdds
+
+  // ADDED ALTERNATIVE SOLUTION
+  // let occurence = 0;
+  // let division = type ? 0 : 1;
+  // for (let card of stack) {
+  //   if (card % 2 === division) {
+  //     occurence += 1;
+  //   }
+  // }
+  // return occurence;
 }
 
 // ==================
 // 1 -
+
 // const cardType = 3
 // console.log(cardTypeCheck([1, 2, 3, 4], cardType))
 
 // ==================
 // 2 -
+
 console.log(determineOddEvenCards([1, 2, 3, 1, 5, 6], true))
 console.log(determineOddEvenCards([1, 2, 3, 1, 5, 6], false))
 // ==================
