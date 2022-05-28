@@ -37,7 +37,11 @@ function hasTrack(playlist, track) {
  * @returns {string[]} new playlist
  */
 function addTrack(playlist, track) {
-  throw new Error('Please implement the addTrack function')
+  const playlistSet = new Set(playlist)
+
+  playlistSet.add(track)
+
+  return Array.from(playlistSet)
 }
 
 /**
@@ -74,12 +78,23 @@ function listArtists(playlist) {
 // ==================
 // 2 -
 
-const playlist = ['The Fashion Show - Grace Jones', 'Dr. Funkenstein - Parliament']
+// const playlist = ['The Fashion Show - Grace Jones', 'Dr. Funkenstein - Parliament']
 
-console.log(hasTrack(playlist, 'Dr. Funkenstein - Parliament'))
-console.log(hasTrack(playlist, 'Walking in the Rain - Grace Jones'))
+// console.log(hasTrack(playlist, 'Dr. Funkenstein - Parliament'))
+// console.log(hasTrack(playlist, 'Walking in the Rain - Grace Jones'))
 
 // ==================
 // 3 -
+
+const playlist = ['Selma - Bijelo Dugme']
+
+console.log(addTrack(playlist, 'Atomic Dog - George Clinton'))
+console.log(addTrack(playlist, 'Selma - Bijelo Dugme'))
+
+// ==================
+// 4 -
+
+// ==================
+// 5 -
 
 // ==================
