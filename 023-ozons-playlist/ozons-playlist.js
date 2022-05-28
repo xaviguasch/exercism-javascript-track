@@ -11,7 +11,9 @@
  * @returns {string[]} new playlist with unique entries
  */
 function removeDuplicates(playlist) {
-  throw new Error('Please implement the removeDuplicates function')
+  const playlistSet = new Set(playlist)
+
+  return Array.from(playlistSet)
 }
 
 /**
@@ -59,6 +61,12 @@ function listArtists(playlist) {
 
 // ==================
 // 1 -
+const playlist = [
+  'Court and Spark - Joni Mitchell',
+  'Big Yellow Taxi - Joni Mitchell',
+  'Court and Spark - Joni Mitchell',
+]
+console.log(removeDuplicates(playlist))
 
 // ==================
 // 2 -
