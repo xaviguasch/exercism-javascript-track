@@ -16,7 +16,9 @@ class OverheatingError extends Error {
  * @throws {Error}
  */
 function checkHumidityLevel(humidityPercentage) {
-  throw new Error('Implement the checkHumidity function')
+  if (humidityPercentage > 70) {
+    throw new Error('Humidity level is too high')
+  }
 }
 
 /**
@@ -43,3 +45,16 @@ function reportOverheating(temperature) {
 function monitorTheMachine(actions) {
   throw new Error('Implement the monitorTheMachine function')
 }
+
+// ==================
+// 1 -
+
+console.log(checkHumidityLevel(60))
+console.log(checkHumidityLevel(100))
+// ==================
+// 2 -
+
+// ==================
+// 3 -
+
+// ==================
