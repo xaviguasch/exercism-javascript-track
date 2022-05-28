@@ -51,7 +51,24 @@ function reportOverheating(temperature) {
  * @throws {ArgumentError|OverheatingError|Error}
  */
 function monitorTheMachine(actions) {
-  throw new Error('Implement the monitorTheMachine function')
+  // try {
+  //   actions.check()
+  // } catch (error) {
+  //   if (error instanceof ArgumentError) {
+  //     actions.alertDeadSensor()
+  //     return
+  //   }
+  //   if (error instanceof OverheatingError) {
+  //     if (error.temperature > 600) {
+  //       actions.shutdown()
+  //       return
+  //     } else {
+  //       actions.alertOverheating()
+  //       return
+  //     }
+  //   }
+  //   actions.check()
+  // }
 }
 
 // ==================
@@ -69,5 +86,14 @@ function monitorTheMachine(actions) {
 
 // ==================
 // 3 -
+
+// console.log(
+//   monitorTheMachine({
+//     check,
+//     alertDeadSensor,
+//     alertOverheating,
+//     shutdown,
+//   })
+// )
 
 // ==================
