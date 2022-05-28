@@ -52,7 +52,11 @@ function addTrack(playlist, track) {
  * @returns {string[]} new playlist
  */
 function deleteTrack(playlist, track) {
-  throw new Error('Please implement the deleteTrack function')
+  const playlistSet = new Set(playlist)
+
+  playlistSet.delete(track)
+
+  return Array.from(playlistSet)
 }
 
 /**
@@ -86,13 +90,18 @@ function listArtists(playlist) {
 // ==================
 // 3 -
 
-const playlist = ['Selma - Bijelo Dugme']
+// const playlist = ['Selma - Bijelo Dugme']
 
-console.log(addTrack(playlist, 'Atomic Dog - George Clinton'))
-console.log(addTrack(playlist, 'Selma - Bijelo Dugme'))
+// console.log(addTrack(playlist, 'Atomic Dog - George Clinton'))
+// console.log(addTrack(playlist, 'Selma - Bijelo Dugme'))
 
 // ==================
 // 4 -
+
+const playlist = ['The Treasure - Fra Lippo Lippi', 'After the Fall - Klaus Nomi']
+
+console.log(deleteTrack(playlist, 'The Treasure - Fra Lippo Lippi'))
+console.log(deleteTrack(playlist, 'I Feel the Magic - Belinda Carlisle'))
 
 // ==================
 // 5 -
