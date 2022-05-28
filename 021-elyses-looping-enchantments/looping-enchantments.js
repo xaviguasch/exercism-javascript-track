@@ -9,7 +9,15 @@
  * @returns {number} number of cards of a single type there are in the deck
  */
 function cardTypeCheck(stack, card) {
-  throw new Error('Implement the cardTypeCheck function')
+  let count = 0
+
+  stack.forEach((c) => {
+    if (c === card) {
+      count++
+    }
+  })
+
+  return count
 }
 
 /**
@@ -22,3 +30,13 @@ function cardTypeCheck(stack, card) {
 function determineOddEvenCards(stack, type) {
   throw new Error('Implement the determineOddEvenCards function')
 }
+
+// ==================
+// 1 -
+const cardType = 3
+console.log(cardTypeCheck([1, 2, 3, 4], cardType))
+
+// ==================
+// 2 -
+
+// ==================
