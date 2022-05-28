@@ -24,7 +24,9 @@ function removeDuplicates(playlist) {
  * @returns {boolean} whether the track is in the playlist
  */
 function hasTrack(playlist, track) {
-  throw new Error('Please implement the hasTrack function')
+  const playlistSet = new Set(playlist)
+
+  return playlistSet.has(track)
 }
 
 /**
@@ -61,15 +63,21 @@ function listArtists(playlist) {
 
 // ==================
 // 1 -
-const playlist = [
-  'Court and Spark - Joni Mitchell',
-  'Big Yellow Taxi - Joni Mitchell',
-  'Court and Spark - Joni Mitchell',
-]
-console.log(removeDuplicates(playlist))
+
+// const playlist = [
+//   'Court and Spark - Joni Mitchell',
+//   'Big Yellow Taxi - Joni Mitchell',
+//   'Court and Spark - Joni Mitchell',
+// ]
+// console.log(removeDuplicates(playlist))
 
 // ==================
 // 2 -
+
+const playlist = ['The Fashion Show - Grace Jones', 'Dr. Funkenstein - Parliament']
+
+console.log(hasTrack(playlist, 'Dr. Funkenstein - Parliament'))
+console.log(hasTrack(playlist, 'Walking in the Rain - Grace Jones'))
 
 // ==================
 // 3 -
