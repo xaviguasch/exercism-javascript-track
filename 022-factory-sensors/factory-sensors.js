@@ -1,6 +1,10 @@
 // @ts-check
 
-class ArgumentError extends Error {}
+class ArgumentError extends Error {
+  constructor() {
+    super(`The sensor is broken`)
+  }
+}
 
 class OverheatingError extends Error {
   constructor(temperature) {
@@ -28,7 +32,11 @@ function checkHumidityLevel(humidityPercentage) {
  * @throws {ArgumentError|OverheatingError}
  */
 function reportOverheating(temperature) {
-  throw new Error('Implement the reportOverheating function')
+  if (temperature === null) {
+    throw new ArgumentError()
+  } else if (temperature > 500) {
+    throw new OverheatingError(temperature)
+  }
 }
 
 /**
@@ -49,10 +57,15 @@ function monitorTheMachine(actions) {
 // ==================
 // 1 -
 
-console.log(checkHumidityLevel(60))
-console.log(checkHumidityLevel(100))
+// console.log(checkHumidityLevel(60))
+// console.log(checkHumidityLevel(100))
+
 // ==================
 // 2 -
+
+// console.log(reportOverheating(null))
+// console.log(reportOverheating(800))
+// console.log(reportOverheating(300))
 
 // ==================
 // 3 -
