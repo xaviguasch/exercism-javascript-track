@@ -64,6 +64,40 @@ Position.prototype.move = function (newX, newY) {
 
 // TASK 5
 
+// class ProgramWindow {
+//   constructor() {
+//     this.screenSize = new Size(800, 600)
+//     this.size = new Size()
+//     this.position = new Position()
+//   }
+
+//   resize(newSize) {
+//     const targetWidth = newSize.width > 1 ? newSize.width : 1
+//     const maxWidth = this.screenSize.width - this.position.x
+//     const newWidth = maxWidth > targetWidth ? targetWidth : maxWidth
+
+//     const targetHeight = newSize.height > 1 ? newSize.height : 1
+//     const maxHeight = this.screenSize.height - this.position.y
+//     const newHeight = maxHeight > targetHeight ? targetHeight : maxHeight
+
+//     this.size.resize(newWidth, newHeight)
+//   }
+
+//   move(newPosition) {
+//     const targetPosX = newPosition.x >= 0 ? newPosition.x : 0
+//     const maxPosX = this.screenSize.width - this.size.width
+//     const newPosX = targetPosX < maxPosX ? targetPosX : maxPosX
+
+//     const targetPosY = newPosition.y >= 0 ? newPosition.y : 0
+//     const maxPosY = this.screenSize.height - this.size.height
+//     const newPosY = targetPosY < maxPosY ? targetPosY : maxPosY
+
+//     this.position.move(newPosX, newPosY)
+//   }
+// }
+
+// TASK 6
+
 class ProgramWindow {
   constructor() {
     this.screenSize = new Size(800, 600)
@@ -94,6 +128,16 @@ class ProgramWindow {
 
     this.position.move(newPosX, newPosY)
   }
+}
+
+function changeWindow(programWindow) {
+  const newSize = new Size(400, 300)
+  const newPosition = new Position(100, 150)
+
+  programWindow.resize(newSize)
+  programWindow.move(newPosition)
+
+  return programWindow
 }
 
 // ==================
@@ -139,16 +183,24 @@ class ProgramWindow {
 
 // ==================
 // 5 -
-const programWindow = new ProgramWindow()
+// const programWindow = new ProgramWindow()
 
-console.log(programWindow)
+// console.log(programWindow)
 
-const newPosition = new Position(50, 100)
-programWindow.move(newPosition)
+// const newPosition = new Position(50, 100)
+// programWindow.move(newPosition)
 
-console.log(programWindow.position.x)
-console.log(programWindow.position.y)
+// console.log(programWindow.position.x)
+// console.log(programWindow.position.y)
 
 // ==================
 // 6 -
+
+const programWindow = new ProgramWindow()
+changeWindow(programWindow)
+
+console.log(programWindow.size.width)
+console.log(programWindow.size.height)
+console.log(programWindow.position.x)
+console.log(programWindow.position.y)
 // ==================
