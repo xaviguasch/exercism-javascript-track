@@ -43,7 +43,8 @@ class TranslationService {
    * @returns {Promise<string[]>}
    */
   batch(texts) {
-    throw new Error('Implement the batch function')
+    if (texts.length === 0) return Promise.reject(new BatchIsEmpty())
+    return Promise.all(texts.map((text) => this.free(text)))
   }
 
   /**
@@ -110,7 +111,14 @@ Requested a batch translation, but there are no texts in the batch.
 // These exercise only works in the Exercism platform. The below is purely for archiving purposes.
 // ==================
 // 1 -
-const service = new TranslationService()
-console.log(service.free('jIyaj'))
+
+// const service = new TranslationService()
+// console.log(service.free('jIyaj'))
 
 // ==================
+// 2 -
+
+// const service = new TranslationService()
+// console.log(service.batch(['jIyaj', "majQa'"]))
+// console.log(service.batch(['jIyaj', "jIyajbe'"]))
+// console.log(service.batch([]))
