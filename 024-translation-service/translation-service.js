@@ -1,3 +1,5 @@
+const { ExternalApi } = require('./api')
+
 /// <reference path="./global.d.ts" />
 // @ts-check
 //
@@ -27,7 +29,7 @@ class TranslationService {
    * @returns {Promise<string>}
    */
   free(text) {
-    throw new Error('Implement the free function')
+    return this.api.fetch(text).then((res) => res.translation)
   }
 
   /**
@@ -104,3 +106,11 @@ Requested a batch translation, but there are no texts in the batch.
     )
   }
 }
+
+// These exercise only works in the Exercism platform. The below is purely for archiving purposes.
+// ==================
+// 1 -
+const service = new TranslationService()
+console.log(service.free('jIyaj'))
+
+// ==================
