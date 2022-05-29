@@ -57,7 +57,16 @@ class TranslationService {
    * @returns {Promise<void>}
    */
   request(text) {
-    throw new Error('Implement the request function')
+    const api = this.api
+    function requestAsPromise(txt) {
+      return new Promise((resolve, reject) => {
+        api.request(txt, (err) => (err ? reject(err) : resolve()))
+      })
+    }
+
+    return requestAsPromise(text)
+      .catch(() => requestAsPromise(text))
+      .catch(() => requestAsPromise(text))
   }
 
   /**
@@ -122,3 +131,9 @@ Requested a batch translation, but there are no texts in the batch.
 // console.log(service.batch(['jIyaj', "majQa'"]))
 // console.log(service.batch(['jIyaj', "jIyajbe'"]))
 // console.log(service.batch([]))
+
+// ==================
+// 3 -
+
+// const service = new TranslationService()
+console.log(service.request("jIyajbe'"))
