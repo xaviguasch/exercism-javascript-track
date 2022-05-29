@@ -80,7 +80,15 @@ class TranslationService {
    * @returns {Promise<string>}
    */
   premium(text, minimumQuality) {
-    throw new Error('Implement the premium function')
+    return this.api
+      .fetch(text)
+      .catch(() => {
+        return this.request(text).then(() => this.api.fetch(text))
+      })
+      .then((res) => {
+        if (res.quality < minimumQuality) throw new QualityThresholdNotMet(text)
+        return res.translation
+      })
   }
 }
 
@@ -136,4 +144,10 @@ Requested a batch translation, but there are no texts in the batch.
 // 3 -
 
 // const service = new TranslationService()
-console.log(service.request("jIyajbe'"))
+// console.log(service.request("jIyajbe'"))
+
+// ==================
+// 4 -
+
+const service = new TranslationService()
+console.log(service.premium("jIyajbe'", 100))
