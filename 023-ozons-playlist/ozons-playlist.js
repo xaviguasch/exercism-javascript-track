@@ -14,6 +14,9 @@ function removeDuplicates(playlist) {
   const playlistSet = new Set(playlist)
 
   return Array.from(playlistSet)
+
+  // ALTERNATIVE SOLUTION
+  // return [...new Set(playlist)]
 }
 
 /**
@@ -42,6 +45,11 @@ function addTrack(playlist, track) {
   playlistSet.add(track)
 
   return Array.from(playlistSet)
+
+  // ALTERNATIVE SOLUTION
+  // const set = new Set(playlist)
+  // set.add(track)
+  // return [ ...set ]
 }
 
 /**
@@ -57,6 +65,12 @@ function deleteTrack(playlist, track) {
   playlistSet.delete(track)
 
   return Array.from(playlistSet)
+
+  // ALTERNATIVE SOLUTION
+
+  // const set = new Set(playlist)
+  // set.delete(track)
+  // return [ ...set ]
 }
 
 /**
@@ -76,6 +90,10 @@ function listArtists(playlist) {
   const artistsSet = new Set(artistsArr)
 
   return Array.from(artistsSet)
+
+  // ALTERNATIVE SOLUTION
+  // const artistSet = new Set(playlist.map((track) => track.split(' - ')[1]))
+  // return [...artistSet]
 }
 
 // ==================
@@ -115,12 +133,12 @@ function listArtists(playlist) {
 // ==================
 // 5 -
 
-const playlist = [
-  'All Mine - Portishead',
-  'Sight to Behold - Devendra Banhart',
-  'Sour Times - Portishead',
-]
+// const playlist = [
+//   'All Mine - Portishead',
+//   'Sight to Behold - Devendra Banhart',
+//   'Sour Times - Portishead',
+// ]
 
-console.log(listArtists(playlist))
+// console.log(listArtists(playlist))
 
 // ==================
