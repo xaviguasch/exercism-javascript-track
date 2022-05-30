@@ -3,11 +3,22 @@
 // convenience to get you started writing code faster.
 //
 
-const colorCode = () => {
-  throw new Error('Remove this statement and implement this function')
+const colorCode = (color) => {
+  return COLORS.indexOf(color)
 }
 
-const COLORS = undefined
+const COLORS = [
+  'black',
+  'brown',
+  'red',
+  'orange',
+  'yellow',
+  'green',
+  'blue',
+  'violet',
+  'grey',
+  'white',
+]
 
 // ==================
 console.log(colorCode('black'))
